@@ -1,0 +1,212 @@
+/* General Styles */
+body {
+    background-color: #bdbcbc; /* Light pink background for a soft tone */
+    color: #06142E; /* Dark blue for text */
+    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    font-weight: normal;
+}
+
+/* Container Styles */
+.container {
+    min-height: 600px;
+    max-height: fit-content;
+    width: 94%;
+    max-width: 1800px; /* Maximum width of the container */
+    margin: 20px auto; /* Center the container */
+    padding: 20px; /* Padding for content */
+    background-color: #ececec; /* Light gray background for content area */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow for depth */
+    overflow-y: auto; /* Add scroll if content exceeds max-height */
+}
+
+/* Icon Styles */
+.nav-icon {
+    border: none; /* Removes any border */
+    outline: none; /* Removes any outline */
+    background: none; /* Ensures no background color is applied */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 0;
+}
+
+.nav-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    filter: brightness(0.8); /* Darken the icon on hover */
+}
+
+/* About Section */
+img {
+    width: 600px; /* Adjust as needed */
+    height: 280px; /* Adjust as needed */
+    border-radius: 0; /* Rounded corners */
+    object-fit: cover;
+}
+
+img:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+    filter: brightness(1.1); /* Brighten image on hover */
+}
+
+/* Contact Form */
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 0.5rem; /* Rounded corners */
+    border: 1px solid #000000; /* Light purple border */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transition for focus */
+}
+
+.form-control:focus {
+    border-color: #707070; /* Coral border on focus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25); /* Focus shadow */
+}
+
+/* Success Message */
+.alert {
+    border-radius: 0.5rem; /* Rounded corners for alerts */
+}
+
+/* Skills Section */
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.progress {
+    height: 1.5rem; /* Height of progress bars */
+    border-radius: 0.5rem; /* Rounded corners for progress bars */
+}
+
+.progress-bar {
+    font-weight: bold; /* Bold text for progress bar */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        text-align: center; /* Center navbar on smaller screens */
+    }
+
+    .nav-link {
+        margin-left: 0; /* Remove left margin */
+        margin-right: 10px; /* Right margin */
+    }
+
+    .container {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+
+    img {
+        width: 150px; /* Smaller width for images */
+        height: 150px; /* Smaller height for images */
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center; /* Center footer text */
+    padding: 20px 0; /* Padding for footer */
+    background-color: #1B3358; /* Dark background for footer */
+    color: #F5D7DB; /* Light pink text in footer */
+    position: relative; /* Position relative for proper layout */
+    bottom: 0; /* Align at the bottom */
+    width: 100%; /* Full width for footer */
+}
+
+
+
+
+/* Offcanvas Styles */
+.offcanvas {
+    position: fixed; /* Fixed position for offcanvas */
+    top: 0; /* Align to top */
+    bottom: 0; /* Stretch to bottom */
+    right: -300px; /* Start off-screen */
+    width: 300px; /* Width of the offcanvas */
+    background-color: #b8b8b8; /* Light pink background */
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    transition: right 0.3s ease; /* Transition for sliding effect */
+    z-index: 1050; /* Ensure it's above other elements */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+/* Offcanvas Open State */
+.offcanvas.show {
+    right: 0; /* Slide in to visible */
+}
+
+/* Overlay Styles */
+.offcanvas-backdrop {
+    position: fixed; /* Fixed position for backdrop */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    right: 0; /* Align to right */
+    bottom: 0; /* Align to bottom */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1040; /* Below offcanvas but above other content */
+}
+
+/* Offcanvas Header */
+.offcanvas-header {
+    padding: 15px; /* Padding for header */
+    background-color: #ffffff; /* Lavender background */
+    color: #06142E; /* Dark blue text color */
+    display: flex; /* Flex layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center align items */
+}
+
+/* Close Button Styles */
+.offcanvas-header .btn-close {
+    background: none; /* No background */
+    border: none; /* No border */
+    color: #06142E; /* Dark blue color for close button */
+    font-size: 1.5rem; /* Larger font size */
+    cursor: pointer; /* Pointer cursor for close button */
+    transition: color 0.3s; /* Smooth transition for color */
+}
+
+.offcanvas-header .btn-close:hover {
+    color: #ffffff; /* Change color on hover */
+}
+
+/* Offcanvas Body */
+.offcanvas-body {
+    padding: 20px; /* Padding for body */
+    color: #06142E; /* Dark blue text color */
+    position: relative; /* Relative positioning for child elements */
+}
+
+/* Link Styles within Offcanvas */
+.offcanvas-body a {
+    display: block; /* Make the link fill the available width */
+    color: #000000; /* Grayish color for links */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition for color, box-shadow, and background */
+    padding: 15px; /* Padding to create space around the text */
+    border-radius: 5px; /* Optional: Rounded corners */
+    margin: 5px 0; /* Space between links */
+    background-color: transparent; /* Background color */
+}
+
+/* Hover Effect */
+.offcanvas-body a:hover {
+    color: #000000; /* Gray color on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    background-color: #ffffff; /* Background color change on hover */
+}
+
+/* Responsive Offcanvas */
+@media (max-width: 768px) {
+    .offcanvas {
+        width: 80%; /* Full width on smaller screens */
+    }
+}
